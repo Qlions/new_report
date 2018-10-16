@@ -1,0 +1,2752 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>中医体质辨识</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="x5-fullscreen" content="true">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/danxuan.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/H_index.css" />
+    <link rel="stylesheet" type="text/css" href="css/index_lei.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index_ly.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+  	<script type="text/javascript">
+  	
+  		$(document).ready(function () {
+   　　			$('body').height($('body')[0].clientHeight);
+ 			 
+				 var ua = window.navigator.userAgent.toLowerCase();
+					if(ua.match(/MicroMessenger/i)=='micromessenger') {
+						$('.top_head').css({
+							display : 'none'
+						});
+						$('.none_ad').css({
+							display : 'none'
+						});	
+					} else {
+						$('.top_head').css({
+							display : 'block'
+						});
+						$('.swiper-container').css({
+//							paddingTop: '1.1rem',
+						});
+						
+						
+						
+			var browser={  
+			    versions:function(){   
+			           var u = navigator.userAgent, app = navigator.appVersion;   
+			           return {//移动终端浏览器版本信息   
+			                trident: u.indexOf('Trident') > -1, //IE内核  
+			                presto: u.indexOf('Presto') > -1, //opera内核  
+			                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核  
+			                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核  
+			                mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端  
+			                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  
+			                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器  
+			                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器  
+			                iPad: u.indexOf('iPad') > -1, //是否iPad  
+			                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部  
+			            };  
+			         }(),  
+		         language:(navigator.browserLanguage || navigator.language).toLowerCase()  
+}   
+				
+   		
+   	if(navigator.userAgent == 'Mozilla/5.0 (Linux; Android 6.0; HUAWEI VIE-AL10 Build/HUAWEIVIE-AL10) AppleWebKit/537.36(KHTML,like Gecko) Version/4.0 Mobile Safari/537.36'){
+   			$('.big_box').addClass('big');
+   			$('.swiper-container').css({
+   				paddingTop: '0.6rem',
+   			})
+		
+   			$('.number').each(function (){
+   				console.log($(this).html())
+//				alert($(this).html())
+
+
+   			})
+   			$(".hide_12_15").show();
+   			$(".hide_12_15").addClass("big");
+   			$(".hide_12_15").hide();
+   		}else {
+   			$('.big_box').removeClass('big')
+   		}
+ 		
+	}
+
+					
+					$('input[type = text]').focus(function (){
+						$('.bot_f').css({
+							position : 'static'
+						})
+					
+					})
+				
+					});
+  	</script>
+  	
+</head>
+<body>
+	<div id="mxbReportInfoId" onclick="javascript:reportInfo();" style="left: 84%;top: 83%;width: 12%; background: url(img/heanlth_look.png) no-repeat; background-size: contain; height: 7%; position: absolute; z-index: 1000;">
+	</div>
+	<div class="upload">
+		<div class="logo_1">
+			<img src="img/loading.gif"/>
+		</div>
+	</div>
+	<div class="model">
+		<div class="model_txt">
+			
+		</div>
+	</div>
+	<!--<div class="tishi">
+		<div class="tishijiantou fadeInUp animated infinite">
+			<img src="img/jiantou.png"/>
+		</div>
+	</div>-->
+	
+	<div class="meng"></div>
+	<div class="meng_1">
+		 <div class="wen">
+		     <img src="img/huadong.png"/>
+		 </div>
+		 <div class="bai">
+		     <img src="img/xiaobai.png"/>
+		 </div>
+		 <div class="left_rifht">
+		     <img src="img/leftright.png"/>
+		 </div>
+		 <div class="haed fadeInRight animated infinite">
+		     <img src="img/head.png"/>
+		 </div>
+		 <div class="Close">
+		 <img src="img/know.png"/>
+		 </div>
+	</div>
+	<div id='card_bot' class="">
+		<div class="card_bot_top">
+			<ul>
+				<li><span class="card_page">选页</span></li>
+				<li style='text-align:center;'>
+					 <font class="sport_page">1</font>
+                	 <i>/</i>
+                	 <font class='page'></font>
+				</li>
+				<li class="close_this" style="opacity: 0.5; position :relative; left:20px;">
+					<i>　</i>
+					<img src="img/close_card.png" alt="" style='float:right; margin-right:20px;'/>
+				</li>
+			</ul>
+		</div>
+		<div class="num_index">
+			<ul class="num_ul">
+				
+			</ul>
+		</div>
+	</div>
+
+    <div class="top_head" >
+    	<p   class="top_p">中医体质辨识</p>
+    </div>
+	
+	<div class="swiper-container"   style="">
+		<div class="none_ad" style="height: 1.33333rem; width: 10rem;"></div>
+	    <div class="swiper-wrapper view " >
+<!--################################################# 第1题-->
+				
+	            <div class="swiper-slide " >
+	            	<div class="big_box number_dan">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			01
+		            		</span>
+		            		<p class="p">您精力充沛吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio1" style="" order='1' types='1'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label num='1' for="radio_id_1" name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label num='2' for="radio_id_1" name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label num='3' for="radio_id_1" name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label num='4' for="radio_id_1" name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label num='5' for="radio_id_1" name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	       	
+	            </div>
+<!--################################################# 第2题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			02
+		            		</span>
+		            		<p class="p">您容易疲乏吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio2" style=""  order='2' types='1'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label num='1' for="radio_id_1" name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label num='2' for="radio_id_1" name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label num='3' for="radio_id_1" name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label num='4' for="radio_id_1" name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label num='5' for="radio_id_1" name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第3题-->
+				 <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			03
+		            		</span>
+		            		<p class="p">您说话声音低弱无力吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio3" style=""  order='3' types='1' >
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label num='1' for="radio_id_1" name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label num='2' for="radio_id_1" name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label num='3' for="radio_id_1" name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label num='4' for="radio_id_1" name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label num='5' for="radio_id_1" name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第4题-->
+                <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			04
+		            		</span>
+		            		<p class="p">您感到闷闷不乐，情绪低沉吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio4" style=""  order='4' types='1'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第5题-->
+                 <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			05
+		            		</span>
+		            		<p class="p">您比一般人耐受不了寒冷(冬天的寒冷，夏天的冷空调、电扇等)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio5" style=""  order='5' types='1' >
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第6题-->
+                <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			06
+		            		</span>
+		            		<p class="p">您能适应外界自然和社会环境的变化吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio6" style=""  order='6' types='1' >
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第7题-->
+                <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			07
+		            		</span>
+		            		<p class="p">您容易失眠吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio7" style=""  order='7' types='1' >
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第8题-->
+                <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			08
+		            		</span>
+		            		<p class="p">您容易忘事(健忘)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio8" style=""  order='8' types='1'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第9题-->	    
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			09
+		            		</span>
+		            		<p class="p">您容易疲乏吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio9" style=""  order='1' types='2'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第10题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			10
+		            		</span>
+		            		<p class="p">您容易气短(呼吸短促，接不上气)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio10" style="" order='2' types='2' >
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第11题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			11
+		            		</span>
+		            		<p class="p">您容易心慌吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio11" style="" order='3' types='2' >
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第12题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			12
+		            		</span>
+		            		<p class="p">您容易头晕或站起时晕眩吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio12" style="" order='4' types='2' >
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>						       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第13题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			13
+		            		</span>
+		            		<p class="p">您比别人容易患感冒吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio13" style="" order='5' types='2'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第14题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			14
+		            		</span>
+		            		<p class="p">您喜欢安静，懒得说话吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio14" style="" order='6' types='2'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第15题-->	    
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			15
+		            		</span>
+		            		<p class="p">您说话声音低弱无力吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio15" style="" order='7' types='2'>
+							        
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" num='1' name="radio_id_1" class="" style=" " />没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" num='2' name="radio_id_1" class=""/>很少</label>
+							        
+ 						       		<input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" num='3' name="radio_id_1" class=""/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" num='4' name="radio_id_1" class=""/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" num='5' name="radio_id_1" class=""/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第16题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			16
+		            		</span>
+		            		<p class="p">您活动量稍大就容易出虚汗吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio16" style="" order='8' types='2'>
+							        
+							       
+							        
+							       <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第17题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			17
+		            		</span>
+		            		<p class="p">您手脚发凉吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio17" style="" order='1' types='3' >
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第18题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			18
+		            		</span>
+		            		<p class="p">您胃脘部、背部或腰膝部怕冷吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio18" style=""  order='2' types='3' >
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第19题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			19
+		            		</span>
+		            		<p class="p">您感到怕冷、衣服比别人穿的多吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio19" style="" order='3' types='3'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第20题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			20
+		            		</span>
+		            		<p class="p">您比一般人耐受不了寒冷(冬天的寒冷，夏天的空调、电扇)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio20" style="" order='4' types='3'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第21题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			21
+		            		</span>
+		            		<p class="p">您比别人容易患感冒吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio21" style=""  order='5' types='3'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第22题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			22
+		            		</span>
+		            		<p class="p">您吃(喝)凉的东西会感到不舒服或者怕吃(喝)凉的东西吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio22" style="" order='6' types='3'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第23题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			23
+		            		</span>
+		            		<p class="p">您受凉或吃(喝)凉的东西后，容易腹泻(拉肚子)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio23" style="" order='7' types='3' >
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第24题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			24
+		            		</span>
+		            		<p class="p">您感到手脚心发热吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio24" style="" order='1' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第25题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			25
+		            		</span>
+		            		<p class="p">您感觉身体、脸上发热吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio25" style="" order='2' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第26题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			26
+		            		</span>
+		            		<p class="p">您皮肤或口唇干吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio26" style="" order='3' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第27题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			27
+		            		</span>
+		            		<p class="p">您口唇的颜色比一般人红吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio27" style="" order='4' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第28题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			28
+		            		</span>
+		            		<p class="p">您容易便秘或者大便干燥吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio28" style="" order='5' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第29题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			29
+		            		</span>
+		            		<p class="p">您面部两颧潮红或偏红吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio29" style="" order='6' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第30题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			30
+		            		</span>
+		            		<p class="p">您感到眼睛干涩吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio30" style=""  order='7' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第31题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			31
+		            		</span>
+		            		<p class="p">您感到口咽干燥，总想喝水吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio31" style="" order='8' types='4'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第32题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			32
+		            		</span>
+		            		<p class="p">您感胸闷或腹部胀满吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio32" style="" order='1' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第33题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			33
+		            		</span>
+		            		<p class="p">您感到身体沉重不轻松或不爽快吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio33" style="" order='2' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第34题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			34
+		            		</span>
+		            		<p class="p">您腹部肥满松软吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio34" style="" order='3' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第35题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			35
+		            		</span>
+		            		<p class="p">您有额部油脂分泌多的现象？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio35" style="" order='4' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第36题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			36
+		            		</span>
+		            		<p class="p">您上眼睑比别人肿(上眼睑有轻微隆起的现象)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio36" style="" order='5' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第37题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			37
+		            		</span>
+		            		<p class="p">您嘴里有黏黏的感觉吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio37" style="" order='6' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第38题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			38
+		            		</span>
+		            		<p class="p">您平时痰多，特别是咽喉部总感到有痰堵着吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio38" style="" order='7' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第39题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			39
+		            		</span>
+		            		<p class="p">您舌苔厚腻或有舌苔厚厚的感觉吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio39" style="" order='8' types='5'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第40题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			40
+		            		</span>
+		            		<p class="p">您面部或鼻部有油腻感或者油光发亮吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio40" style="" order='1' types='6'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第41题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			41
+		            		</span>
+		            		<p class="p">您容易生痤疮或者疥疮吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio41" style="" order='2' types='6'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第42题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			42
+		            		</span>
+		            		<p class="p">您感到口苦或者嘴里有异味？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio42" style="" order='3' types='6'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第43题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			43
+		            		</span>
+		            		<p class="p">您大便黏滞不爽、有解不尽的感觉吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio43" style="" order='4' types='6'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第44题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			44
+		            		</span>
+		            		<p class="p">您小便时尿道有发热感、尿色浓(深)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio44" style="" order='5' types='6'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第45题-->
+	           <div class="swiper-slide" id="men_H">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			45
+		            		</span>
+		            		<p class="p">您的阴囊部位潮湿吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio45" style="" order='6' types='6'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--女性45题-->	            
+	            <div class="swiper-slide" id=" ">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			45
+		            		</span>
+		            		<p class="p">您带下色黄(白带颜色发黄)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio45" style="" order='6' types='6'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第46题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			46
+		            		</span>
+		            		<p class="p">您的皮肤在不知不觉中会出现紫青淤斑(皮下出血)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio46" style="" order='1' types='7'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第47题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			47
+		            		</span>
+		            		<p class="p">您两颧部有细微红丝吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio47" style="" order='2' types='7'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第48题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			48
+		            		</span>
+		            		<p class="p">您身体上有哪里疼吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio48" style="" order='3' types='7'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第49题-->
+	         <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			49
+		            		</span>
+		            		<p class="p">您面色晦暗、或容易出现褐斑吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio49" style="" order='4' types='7'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第50题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			50
+		            		</span>
+		            		<p class="p">您容易有黑眼圈吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio50" style="" order='5' types='7'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第51题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			51
+		            		</span>
+		            		<p class="p">您容易忘事(健忘)吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio51" style="" order='6' types='7'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第52题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			52
+		            		</span>
+		            		<p class="p">您口唇颜色偏暗吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio52" style="" order='7' types='7'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第53题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			53
+		            		</span>
+		            		<p class="p">您感到闷闷不乐、情绪低沉吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio53" style="" order='1' types='8'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第54题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			54
+		            		</span>
+		            		<p class="p">您容易精神紧张、焦虑不安吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio54" style="" order='2' types='8'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第55题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			55
+		            		</span>
+		            		<p class="p">您多愁善感、感情脆弱吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio55" style="" order='3' types='8'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第56题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			56
+		            		</span>
+		            		<p class="p">您容易感到害怕或者受到惊吓吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio56" style="" order='4' types='8'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第57题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			57
+		            		</span>
+		            		<p class="p">您肋部或乳房会胀疼吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio57" style="" order='5' types='8'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第58题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			58
+		            		</span>
+		            		<p class="p">您无缘无故叹气吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio58" style="" order='6' types='8'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第59题-->
+	              <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			59
+		            		</span>
+		            		<p class="p">您咽喉部有异物感，且吐之不出、咽之不下吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio59" style="" order='7' types='8'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第60题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			60
+		            		</span>
+		            		<p class="p">您没有感冒时也会打喷嚏吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio60" style="" order='1' types='9'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第61题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			61
+		            		</span>
+		            		<p class="p">您没有感冒时也会鼻塞、流鼻涕吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio61" style="" order='2' types='9'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第62题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			62
+		            		</span>
+		            		<p class="p">您有因季节变化、温度变化或异味等原因而咳喘的现象吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio62" style="" order='3' types='9'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第63题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			63
+		            		</span>
+		            		<p class="p">您容易过敏（对药物、食物、气味、花粉或在季节交替、气候变化时）吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio63" style="" order='4' types='9'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第64题-->
+	     <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			64
+		            		</span>
+		            		<p class="p">您的皮肤容易起荨麻疹（风团、风疹块、风疙瘩）吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio64" style="" order='5' types='9'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第65题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			65
+		            		</span>
+		            		<p class="p">您的皮肤因过敏出现过紫癜（紫红色瘀点、瘀斑）吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio65" style="" order='6' types='9'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第66题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box ">
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			66
+		            		</span>
+		            		<p class="p">您的皮肤一抓就红，并且出现抓痕吗？</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio66" style="" order='7' types='9'>
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="没有" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" "  num='1'/>没有</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="很少"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>很少</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="有时"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='3'/>有时</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="经常"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='4'/>经常</label>
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="总是"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='5'/>总是</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第题-->
+	     
+	     
+	    
+
+<!--以上为问题答案结构层-->
+         </div>    
+
+	</div>  
+	<!--###############尾页####################--> 
+	<!-- <div class="bot_f" >
+        <div class="pic">
+            <div class="left">
+                <img src="img/zuohua.png"/>
+            </div>
+            <div class="number1">
+                <img src="img/DTK.png"/>
+                <span >
+                    <font class="sport_page">1</font>
+                    <i>/</i>
+                    <font class="page">999</font>
+                </span>
+            </div>
+            <div class="C_S">
+                <img src="img/C_S.png"/>
+                <span><font>暂存</font></span>
+            </div>
+            
+            <div class="right">
+                <img src="img/youhua.png"/>
+            </div>
+        </div>  
+         
+    </div> -->
+    <div class="bot_f" >
+        <div class="pic">
+            <div class="number1" >
+                <img src="img/DTK.png"/>
+                <span >
+                    <font class="sport_page">1</font>
+                    <i>/</i>
+                    <font class="page">999</font>
+                </span>
+            </div>
+            <div id='save_H' class="C_S">
+                <img src="img/C_S.png"/>
+                <span><font class="save_font">暂存</font></span>
+            </div>
+            
+        </div>  
+         
+    </div>
+
+    <script src="./js/swiper.min.js"></script>
+	<jsp:include page="dataPage.jsp"></jsp:include>
+    <script>
+
+    var swiper = new Swiper('.swiper-container-a',{
+    	scrollbar: '.swiper-scrollbar',
+        direction: 'vertical',
+//      slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    })
+
+  	function add(document) {
+  			document,body.addEventListener('touchmove', function(event) {
+			var ev = ev || window.event	
+			 ev.preventDefault();
+	}, false);
+  		}
+  		
+  	//长页下滑
+  	
+  		
+  		
+  	</script>
+   
+</body>
+ <script>
+
+
+    </script>
+ 	<script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src='js/zepto.min.js'></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/danxuan.js"></script>    
+    <script type="text/javascript" src="js/touch.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
+    <script type="text/javascript" src="js/yujiazai.js"></script>
+    <script type="text/javascript" src="js/dataJSON.js"></script>
+    <script type="text/javascript" src="js/dataReturnJSON.js"></script>
+    <script type="text/javascript" src="dataPage.js"></script>
+</html>

@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<base href="<%=basePath%>"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>A型性格</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="x5-fullscreen" content="true">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/danxuan.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/H_index.css" />
+    <link rel="stylesheet" type="text/css" href="css/index_lei.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index_ly.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <!--<script src="js/dataJSON.js"></script>-->
+  	<script type="text/javascript">
+  	
+  		$(document).ready(function () {
+   　　			$('body').height($('body')[0].clientHeight);
+ 			//			//禁用手机默认的触屏滚动行为
+//				document.body.addEventListener('touchmove', function(event) {
+//					var ev = ev || window.event	
+//						 ev.preventDefault();
+//				}, false);
+				 var ua = window.navigator.userAgent.toLowerCase();
+					if(ua.match(/MicroMessenger/i)=='micromessenger') {
+						$('.top_head').css({
+							display : 'none'
+						});
+						$('.none_ad').css({
+							display : 'none'
+						});	
+					} else {
+						$('.top_head').css({
+							display : 'block'
+						});
+						$('.swiper-container').css({
+//							paddingTop: '1.1rem',
+						});
+						
+						
+						
+			var browser={  
+			    versions:function(){   
+			           var u = navigator.userAgent, app = navigator.appVersion;   
+			           return {//移动终端浏览器版本信息   
+			                trident: u.indexOf('Trident') > -1, //IE内核  
+			                presto: u.indexOf('Presto') > -1, //opera内核  
+			                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核  
+			                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核  
+			                mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端  
+			                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  
+			                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器  
+			                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器  
+			                iPad: u.indexOf('iPad') > -1, //是否iPad  
+			                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部  
+			            };  
+			         }(),  
+		         language:(navigator.browserLanguage || navigator.language).toLowerCase()  
+}   
+//document.writeln("语言版本: "+browser.language);  
+//document.writeln(" 是否为移动终端: "+browser.versions.mobile);  
+//document.writeln(" ios终端: "+browser.versions.ios);  
+//document.writeln(" android终端: "+browser.versions.android);  
+//document.writeln(" 是否为iPhone: "+browser.versions.iPhone);  
+//document.writeln(" 是否iPad: "+browser.versions.iPad);  
+//document.writeln(navigator.userAgent);  
+						
+   		
+   	if(navigator.userAgent == 'Mozilla/5.0 (Linux; Android 6.0; HUAWEI VIE-AL10 Build/HUAWEIVIE-AL10) AppleWebKit/537.36(KHTML,like Gecko) Version/4.0 Mobile Safari/537.36'){
+   			$('.big_box').addClass('big');
+   			$('.swiper-container').css({
+   				paddingTop: '0.6rem',
+   			})
+		
+   			$('.number').each(function (){
+   				console.log($(this).html())
+//				alert($(this).html())
+
+
+   			})
+   			$(".hide_12_15").show();
+   			$(".hide_12_15").addClass("big");
+   			$(".hide_12_15").hide();
+   		}else {
+   			$('.big_box').removeClass('big')
+   		}
+ 		
+	}
+
+					
+					$('input[type = text]').focus(function (){
+						$('.bot_f').css({
+							position : 'static'
+						})
+					
+					})
+//					
+					});
+  	</script>
+  		
+</head>
+<body>
+	<div id="mxbReportInfoId" onclick="javascript:reportInfo();" style="left: 84%;top: 83%;width: 12%; background: url(img/heanlth_look.png) no-repeat; background-size: contain; height: 7%; position: absolute; z-index: 1000;">
+	</div>
+	<div class="upload">
+		<div class="logo_1">
+			<img src="img/loading.gif"/>
+		</div>
+	</div>
+	<div class="model">
+		<div class="model_txt">
+			
+		</div>
+	</div>
+	<!--<div class="tishi">
+		<div class="tishijiantou fadeInUp animated infinite">
+			<img src="img/jiantou.png"/>
+		</div>
+	</div>-->
+	
+	<div class="meng"></div>
+	<div class="meng_1">
+		 <div class="wen">
+		     <img src="img/huadong.png"/>
+		 </div>
+		 <div class="bai">
+		     <img src="img/xiaobai.png"/>
+		 </div>
+		 <div class="left_rifht">
+		     <img src="img/leftright.png"/>
+		 </div>
+		 <div class="haed fadeInRight animated infinite">
+		     <img src="img/head.png"/>
+		 </div>
+		 <div class="Close">
+		 <img src="img/know.png"/>
+		 </div>
+	</div>
+	<div id='card_bot' class="">
+		<div class="card_bot_top">
+			<ul>
+				<li><span class="card_page">选页</span></li>
+				<li style='text-align:center;'>
+					 <font class="sport_page">1</font>
+                	 <i>/</i>
+                	 <font class='page'></font>
+				</li>
+				<li class="close_this" style="opacity: 0.5; position:relative; left:20px;">
+					<i>　</i>
+					<img src="img/close_card.png" alt="" style='float:right; margin-right:20px;' />
+				</li>
+			</ul>
+			
+			
+			
+		</div>
+		<div class="num_index">
+			<ul class="num_ul">
+				
+			</ul>
+		</div>
+	</div>
+
+    <div class="top_head" >
+    	<p   class="top_p">A型性格分析</p>
+    </div>
+	
+	<div class="swiper-container"   style="">
+		<div class="none_ad" style="height: 1.33333rem; width: 10rem;"></div>
+	    <div class="swiper-wrapper view " >
+<!--################################################# 第1题-->
+				
+	            <div class="swiper-slide " >
+	            	<div class="big_box " order='51'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			01
+		            		</span>
+		            		<p class="p">我总是力图说服别人同意我的观点</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio1" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	       	
+	            </div>
+<!--################################################# 第2题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='52'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			02
+		            		</span>
+		            		<p class="p">即使没有什么要紧的事,我走路也快</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio2" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第3题-->
+				 <div class="swiper-slide">
+	            	<div class="big_box " order='53'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			03
+		            		</span>
+		            		<p class="p">我经常感到应该做的事太多,有压力</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio3" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第4题-->
+                <div class="swiper-slide">
+	            	<div class="big_box " order='54'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			04
+		            		</span>
+		            		<p class="p">我自己决定的事,别人很难让我改变主意</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio4" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第5题-->
+                 <div class="swiper-slide">
+	            	<div class="big_box " order='55'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			05
+		            		</span>
+		            		<p class="p">有些人和事常常使我十分恼火</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio5" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第6题-->
+                <div class="swiper-slide">
+	            	<div class="big_box " order='56'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			06
+		            		</span>
+		            		<p class="p">在急需买东西但又要排长队时，我宁愿不买</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio6" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第7题-->
+                <div class="swiper-slide">
+	            	<div class="big_box " order='57'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			07
+		            		</span>
+		            		<p class="p">有些工作我根本安排不过来,只能临时挤时间去做</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio7" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第8题-->
+                <div class="swiper-slide">
+	            	<div class="big_box " order='58'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			08
+		            		</span>
+		            		<p class="p">上班或赴约会时,我从来不迟到</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio8" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第9题-->	    
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='59'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			09
+		            		</span>
+		            		<p class="p">当我正在做事,谁要是打扰我,不管有意无意,我总是感到恼火</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio9" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第10题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box " order='60'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			10
+		            		</span>
+		            		<p class="p">我总看不惯那些慢条斯理,不紧不慢的人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio10" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第11题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='61'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			11
+		            		</span>
+		            		<p class="p">我常常忙得透不过气来,因为该做的事情太多了</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio11" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第12题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='62'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			12
+		            		</span>
+		            		<p class="p">即使跟别人合作,我也总想单独完成一些更重要的部分</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio12" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第13题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='63'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			13
+		            		</span>
+		            		<p class="p">有时我真想骂人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio13" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第14题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='64'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			14
+		            		</span>
+		            		<p class="p">我做事总是喜欢慢慢来,而且思前想后,拿不定主意</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio14" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第15题-->	    
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='65'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			15
+		            		</span>
+		            		<p class="p">排队买东西,要是有人加塞,我就忍不住要指责他或出来干涉</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio15" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第16题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='66'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			16
+		            		</span>
+		            		<p class="p">我觉得自己是一个无忧无虑,悠闲自在的人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio16" style="" >
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第17题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='67'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			17
+		            		</span>
+		            		<p class="p">有时连我自己都觉得,我所操心的事远远超过我应该操心的范围</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio17" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第18题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='68'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			18
+		            		</span>
+		            		<p class="p">无论做什么事,即使比别人差,我也无所谓</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio18" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第19题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='69'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			19
+		            		</span>
+		            		<p class="p">做什么事我也不着急,着急也没有用,不着急也误不了事</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio19" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第20题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='70'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			20
+		            		</span>
+		            		<p class="p">我从来没想过要按自己的想法办事</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio20" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第21题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='71'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			21
+		            		</span>
+		            		<p class="p">每天的事情都使我精神十分紧张</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio21" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第22题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='72'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			22
+		            		</span>
+		            		<p class="p">就是逛公园,赏花,观鱼等,我也总是先看完,等着同来的人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio22" style="" >
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第23题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='73'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			23
+		            		</span>
+		            		<p class="p">我常常不能宽容别人的缺点和毛病</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio23" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第24题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='74'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			24
+		            		</span>
+		            		<p class="p">在我认识的人里,个个我都喜欢</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio24" style="" >
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第25题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='75'>
+	            		<div class="question_1">
+		            	<span class="number number_dan" >
+		            			25
+		            		</span>
+		            		<p class="p">听到别人发表不正确的见解,我总想立即就去纠正他</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio25" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第26题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='76'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			26
+		            		</span>
+		            		<p class="p">无论做什么事,我都比别人快一些</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio26" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第27题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='77'>
+	            		<div class="question_1">
+		            	<span class="number number_dan" >
+		            			27
+		            		</span>
+		            		<p class="p">当别人对我无礼时,我对他也不客气</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio27" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第28题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='78'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			28
+		            		</span>
+		            		<p class="p">我总觉得我有能力把一切事情办好</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio28" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第29题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='79'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			29
+		            		</span>
+		            		<p class="p">聊天时,我也总是急于说出自己的想法,甚至打断别人的话</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio29" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第30题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='80'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			30
+		            		</span>
+		            		<p class="p">人们认为我是个安静,沉着,有耐心的人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio30" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第31题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='81'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			31
+		            		</span>
+		            		<p class="p">我觉得在我认识的人之中值得我信任和佩服的人实在不多</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio31" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第32题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='82'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			32
+		            		</span>
+		            		<p class="p">对未来我有许多想法和打算,并总想都能尽快实现</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio32" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第33题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='83'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			33
+		            		</span>
+		            		<p class="p">有时我也会说人家的闲话</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio33" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第34题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='84'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			34
+		            		</span>
+		            		<p class="p">尽管时间很宽裕,我吃饭也快</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio34" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第35题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='85'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			35
+		            		</span>
+		            		<p class="p">听人讲话或报告如讲得不好,我就非常着急,总想还不如我来讲哩</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio35" style="" >
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第36题-->
+	          <div class="swiper-slide">
+	            	<div class="big_box " order='86'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			36
+		            		</span>
+		            		<p class="p">即使有人欺侮了我,我也不在乎</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio36" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第37题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='87'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			37
+		            		</span>
+		            		<p class="p">我有时会把今天该做的事拖到明天去做</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio37" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第38题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='88'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			38
+		            		</span>
+		            		<p class="p">人们认为我是一个干脆,利落,高效率的人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio38" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第39题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='89'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			39
+		            		</span>
+		            		<p class="p">有人对我或我的工作吹毛求疵时,很容易挫伤我的积极性</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio39" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第40题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='90'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			40
+		            		</span>
+		            		<p class="p">我常常感到时间已经晚了,可一看表还早呢</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio40" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第41题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='91'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			41
+		            		</span>
+		            		<p class="p">我觉得我是一个非常敏感的人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio41" style="" >
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第42题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='92'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			42
+		            		</span>
+		            		<p class="p">我做事总是匆匆忙忙的,力图用最少的时间办尽量多的事情</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio42" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第43题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='93'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			43
+		            		</span>
+		            		<p class="p">如果犯有错误,不管大小,我全都主动承认</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio43" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第44题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='94'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			44
+		            		</span>
+		            		<p class="p">坐公共汽车时,我常常感到车开得太慢</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio44" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第45题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='95'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			45
+		            		</span>
+		            		<p class="p">无论做什么事,即使看着别人做不好我也不想拿来替他做</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio45" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第46题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='96'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			46
+		            		</span>
+		            		<p class="p">我常常为工作没做完,一天又过去了而感到忧虑</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio46" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第47题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='97'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			47
+		            		</span>
+		            		<p class="p">很多事情如果由我来负责,情况要比现在好得多</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio47" style="" >
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第48题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box " order='98'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			48
+		            		</span>
+		            		<p class="p">有时我会想到一些说不出口的坏念头</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio48" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第49题-->
+	         <div class="swiper-slide">
+	            	<div class="big_box " order='99'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			49
+		            		</span>
+		            		<p class="p">即使领导我的人能力差,水平低,不怎么样,我也能服从和合作</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio49" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第50题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='100'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			50
+		            		</span>
+		            		<p class="p">必须等待什么的时候,我总是心急如焚,缺乏耐心</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio50" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第51题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='101'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			51
+		            		</span>
+		            		<p class="p">我常常感到自己能力不够,所以在做事遇到不顺利时就想放弃不干了</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio51" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第52题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='102'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			52
+		            		</span>
+		            		<p class="p">我每天都看电视,也看电影,不然心里就不舒服</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio52" style="" >
+							        
+							       
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第53题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box " order='103'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			53
+		            		</span>
+		            		<p class="p">别人托我办的事,只要答应了,我从不拖延</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio53" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第54题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='104'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			54
+		            		</span>
+		            		<p class="p">人们都说我很有耐心,干什么事都不着急</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio54" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第55题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='105'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			55
+		            		</span>
+		            		<p class="p">外出乘车,船或跟人约定时间办事时,我很少迟到,如对方耽误我就恼火</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio55" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第56题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='106'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			56
+		            		</span>
+		            		<p class="p">偶尔我也会说一两句假话</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio56" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第57题-->
+	            <div class="swiper-slide">
+	            	<div class="big_box " order='107'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			57
+		            		</span>
+		            		<p class="p">许多事本来可以大家分担,可我喜欢一个人去干</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio57" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第58题-->
+	             <div class="swiper-slide">
+	            	<div class="big_box " order='108'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			58
+		            		</span>
+		            		<p class="p">我觉得别人对我的话理解太慢,甚至理解不了我的意思似的</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio58" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第59题-->
+	              <div class="swiper-slide">
+	            	<div class="big_box " order='109'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			59
+		            		</span>
+		            		<p class="p">我是一个性子暴躁的人</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio59" style="" >
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+<!--################################################# 第60题-->
+	           <div class="swiper-slide">
+	            	<div class="big_box " order='110'>
+	            		<div class="question_1">
+		            		<span class="number number_dan" >
+		            			60
+		            		</span>
+		            		<p class="p">我常常容易看到别人的短处而忽视别人的长处</p>
+	            		</div>
+	            		<!--中医内容-->
+	            		<hr / >
+	            		<div class="inputs abel_radio ba_shi_zhi_liu_H">
+		            		<form action="" method="get">
+		            			<div id="label_radio60" style="" >
+							        
+							       
+							         <input type="radio" id="radio_id_1" name="one" value="是" style=""/>
+							        <label for="radio_id_1" name="radio_id_1" class="" style=" " num='1' />是</label>
+							       
+							        
+							        <input type="radio" id="radio_id_1" name="one" value="否"/>
+							        <label for="radio_id_1" name="radio_id_1" class="" num='2'/>否</label>
+							        
+							    </div>
+		            		</form>
+		            	</div>
+		            </div>	   
+	            </div>
+
+	     
+	     
+	    
+
+<!--以上为问题答案结构层-->
+         </div>    
+
+	</div>  
+	<!--###############尾页####################--> 
+<!-- 	<div class="bot_f" >
+        <div class="pic">
+            <div class="left">
+                <img src="img/zuohua.png"/>
+            </div>
+            <div class="number1">
+                <img src="img/DTK.png"/>
+                <span >
+                    <font class="sport_page">1</font>
+                    <i>/</i>
+                    <font class="page">999</font>
+                </span>
+            </div>
+            <div class="C_S">
+                <img src="img/C_S.png"/>
+                <span><font class="save_">暂存</font></span>
+            </div>
+            
+            <div class="right">
+                <img src="img/youhua.png"/>
+            </div>
+        </div>  
+         
+    </div> -->
+    <div class="bot_f" >
+        <div class="pic">
+            <div class="number1">
+                <img src="img/DTK.png"/>
+                <span >
+                    <font class="sport_page">1</font>
+                    <i>/</i>
+                    <font class="page">999</font>
+                </span>
+            </div>
+            <div class="C_S">
+                <img src="img/C_S.png"/>
+                <span><font class="save_font">暂存</font></span>
+            </div>
+            
+        </div>  
+         
+    </div>
+
+    <script src="./js/swiper.min.js"></script>
+
+    <script>
+
+    var swiper = new Swiper('.swiper-container-a',{
+    	scrollbar: '.swiper-scrollbar',
+        direction: 'vertical',
+//      slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    })
+
+  	function add(document) {
+  			document,body.addEventListener('touchmove', function(event) {
+			var ev = ev || window.event	
+			 ev.preventDefault();
+	}, false);
+  		}
+  		
+  	//长页下滑  			
+  	</script>
+   
+</body>
+ 	<script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src='js/zepto.min.js'></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/danxuan.js"></script>
+    
+    <script type="text/javascript" src="js/touch.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
+    <script type="text/javascript" src="js/yujiazai.js"></script>
+    <script type="text/javascript" src="js/dataReturnJSON.js"></script>
+    <script type="text/javascript" src="include.js"></script>
+    
+</html>

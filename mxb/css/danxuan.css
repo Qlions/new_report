@@ -1,0 +1,120 @@
+label{
+      display:-moz-inline-block;
+      display:inline-block;
+      cursor:pointer;
+      margin:0 1.066667rem 0 0;
+      text-indent: 0.666667rem;
+      line-height: 0.466667rem;
+      /*overflow: hidden;*/
+      background:url(../img/danxuankongxin.png) no-repeat left top;
+      background-size:0.466667rem ;
+      height: 0.466667rem;
+      color: #888;
+      font-size: 0.45rem;
+}
+#radio_id_1,#radio_id_2{display:none;}
+.label_checked{
+    background:url(../img/danxuanshixin.png)  no-repeat left bottom;
+    background-size:0.466667rem ;
+}
+.label_checked_1{
+	background:url(../img/duoxuan_hover.png)  no-repeat left bottom;
+    background-size:0.466667rem ;
+    font-size: 0.45rem;
+}
+.label_checked_2{
+	background:url(../img/duoxuan.png)  no-repeat left bottom;
+	display:-moz-inline-block;
+      display:inline-block;
+      cursor:pointer;
+      margin:0 1.066667rem 0 0;
+      text-indent: 0.666667rem;
+      line-height: 0.466667rem;
+      /*overflow: hidden;*/
+      background-size:0.466667rem ;
+      height: 0.466667rem;
+      color: #888;
+      font-size: 0.45rem;
+      
+}
+
+.label_checked_4{
+	background:url(../img/duoxuan_hover.png)  no-repeat left bottom;
+    background-size:0.466667rem ;
+    font-size: 0.45rem;
+}
+.label_checked_5{
+	background:url(../img/duoxuan.png)  no-repeat left bottom;
+	display:-moz-inline-block;
+      display:inline-block;
+      cursor:pointer;
+      margin:0 1.066667rem 0 0;
+      text-indent: 0.666667rem;
+      line-height: 0.466667rem;
+      /*overflow: hidden;*/
+      background-size:0.466667rem ;
+      height: 0.466667rem;
+      color: #888;
+      font-size: 0.45rem;
+      
+}
+#label_checked_gong{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#label_checked_bor{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+
+#label_checked_sis{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+
+#label_checked_sis2{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+
+#label_checked_bor2{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+
+#label_checked_jing{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#luan{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#chao{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#qian{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#lie{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#ru{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#xian{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#zi{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}
+#gong{
+	background:url(../img/duoxuan.png)  no-repeat center bottom;
+      background-size:0.466667rem ;
+}

@@ -1,0 +1,136 @@
+
+.L_wushi_yi_label label{
+	width: 3.5rem;
+	float: left;
+	
+}
+.L_wushi_san_label label{
+	width: 3.5rem;
+	float: left;
+	margin-left: 0.13rem
+}
+
+.ly_inputs_div{
+	/*margin-left: 1.5rem;*/
+	/*margin-top: 0.4rem;*/
+	/*overflow: hidden;*/
+	/*vertical-align:top;*/
+}
+
+.ly_inputs107{
+	width: 1.0rem;
+	margin-top: 0.4rem;
+	outline: none;
+	color: black;
+	border-top: none;
+	border-left:none;
+	border-right:none ;
+	text-align: middle;
+	    border-bottom: 1px solid #ccc;
+}
+
+.ly_inputs_div span{
+	font-size: 0.4rem;
+	color: #888;
+}
+
+.ly_inputs_div option{
+	font-size: 0.373333rem;
+}
+
+.ly_div107{
+z-index: -10; 
+ overflow-y: scroll; 
+ height: 12rem;
+ /*margin-top: 0rem;*/	
+
+}
+.ly_div49-51{
+overflow: scroll; 
+height: 15.0rem;	
+}
+
+
+.ly_left{
+	display: inline-block;
+	width: 5rem;
+	text-align: right;
+}
+
+/*22题*/
+
+.ly_div23{
+	width: 2.2333rem;
+	text-align: right;
+}
+.ly_div07{
+
+ overflow-y: scroll; 
+ height: 10rem;
+ margin-top: 0.4rem;
+ 	
+
+}
+
+.no_18_1 input {
+	
+text-align: center;
+}
+.hide_30_36{
+	display: none;
+}
+.hide_12_15{
+	display: none;
+}
+.hide_16_18{
+	display: none;
+}
+.hide_19{
+	display: none;
+}
+.hide_20_21{
+	display: none;
+}
+.hide_22_25{
+	display: none;
+}
+.hide_25_27{
+	display: none;
+}
+.hide_29{
+	display: none;
+}
+.L_sishi_label label{
+	float: left;
+	width: 2.35rem;
+}
+.L_wushisan_lable label{
+	float: left;
+	width: 3.5rem;
+	margin-right: 0;
+}
+.hertmoreHide{
+	display: none;
+}
+input[type =text]{
+	width: 1.5rem;
+	border: none;
+	border-bottom: 1px solid #CCCCCC;
+	color: #6BAE3D;
+	font-size: 0.45rem;
+}
+.ly_form56{
+	margin-top: 0.4rem;
+	color: #000000;
+}
+.big{
+	margin-top: 0.1rem;
+}
+
+
+
+
+
+
+
+
